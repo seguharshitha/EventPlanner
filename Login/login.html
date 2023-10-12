@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login/Signup Page</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <div class="toggle">
+          <nav role="navigation">
+              <div id="menuToggle">
+                  <input type="checkbox"/>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <ul id="menu">
+                      <a href="../website.html"><li>Home</li></a>
+                      <a href="#About"><li>About</li></a>
+                      <a href=""><li>Info</li></a>
+                      <a href=""><li>ContactUs</li></a>
+                  </ul>
+              </div>
+          </nav>
+      </div>
+      <div class="Name">
+          <label for="name"><b>Event Planner</b></label>
+      </div>
+      <div class="img">
+          <img src="..\Images\logo.jpg" height="100" width="100"  >
+      </div>
+  </div>
+      <div class="bg-image" id="bg_image"></div>
+      <!--<div class="topbar">
+        <div class="headerlogo">
+          <img src="..\Images\logo.jpg" height="100" width="100"  >
+        </div>
+        <div class="website_name">
+          <label for="name"><b>Event Planner</b></label>
+        </div>
+        <div class="cartlogo">
+          cart
+        </div>
+        <div class="username">
+          User Name
+        </div>
+        <div class="searchbutton">
+          <form action="/action_page.php">
+            <input class="searchinput" type="text" placeholder="Search.." name="search">
+            <button class="searchbtn" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>-->
+      <div class="middlebar">
+        <div class="leftside">
+          
+        </div>
+        <div class="rightside">
+          <div class="buttons">
+            <button class="cb" id="CustBtn">Customer</button>
+            <button class="cb" id="ClntBtn">Client</button>
+          </div>
+        </div>
+      </div>
+      <div class="bottombar">
+        <div class="social_network one">
+          Social network links and logos
+        </div>
+        <div class="gettoknowus two">
+          Get to Know Us<br>
+          <br><a class="abtus" href="">About Us</a>
+        </div>
+        <div class="signatre_app_links three">
+          <img class="QR_Code" src="../Images/QR_without_frame.png" alt="QR_Code">
+          <div class="Nmae">EVENT<br>PLANNER</div>
+        </div>
+      </div>
+      <div class="maincontainer" id="maincontainer">
+        <div class="card" id="card">
+          <div class="front">
+            <button id="close">X</button>
+            <header>Customer<br>Login Form</header>
+            <form name="CustLogin" method="post" action="../RegistrationPage/Category.html" onsubmit="return validateform()">
+              <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="text" required placeholder="Email or Phone" name="Email">
+              </div>
+              <div class="field space">
+                <span class="fa fa-lock"></span>
+                <input type="password" name="password" class="pass-key" required placeholder="Password">
+                <span class="show">SHOW</span>
+              </div>
+              <div class="pass">
+                <a href="#">Forgot Password?</a>
+              </div>
+              <div class="field">
+                <input type="submit" value="LOGIN">
+              </div>
+            </form>
+            <div class="login">Or login with</div>
+            <div class="links">
+              <div class="facebook">
+                <i class="fab fa-facebook-f"><span>Facebook</span></i>
+              </div>
+              <div class="google">
+                <i class="fab fa-google"></i><span>Google</span>
+              </div>
+            </div>
+            <div class="signup">Don't have account?
+                <button id="signupbtn">Register</button>
+            </div>
+          </div>
+          <div class="back">
+              <button id="back_close">X</button>
+              <header>Customer<br>Register Form</header>
+              <form action="../Registration Page/Category.html">
+                <div class="field">
+                  <span class="fa fa-user"></span>
+                  <input type="text" required placeholder="Email or Phone">
+                </div>
+                <div class="field space">
+                  <span class="fa fa-lock"></span>
+                  <input type="password" class="pass-key" required placeholder="Password">
+                  <span class="show">SHOW</span>
+                </div>
+                <div class="field space">
+                  <span class="fa fa-lock"></span>
+                  <input type="password" class="pass-key" required placeholder="Confirm Password">
+                </div>
+                <div class="field space">
+                  <input type="submit" value="REGISTER">
+                </div>
+              </form>
+              <div class="login">Or login with</div>
+            <div class="links">
+              <div class="facebook">
+                <i class="fab fa-facebook-f"><span>Facebook</span></i>
+              </div>
+              <div class="google">
+                <i class="fab fa-google"></i><span>Google</span>
+              </div>
+            </div>
+              <div class="signup">Already have account?
+                <button id="Signinbtn">Signin</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="maincontainer1" id="maincontainer1">
+        <div class="card1" id="card1">
+          <div class="front1">
+            <button id="close1">X</button>
+            <header>Client<br>Login Form</header>
+            <form action="../RegistrationPage/Category.html">
+              <div class="field1">
+                <span class="fa fa-user1"></span>
+                <input type="text" required placeholder="Email or Phone">
+              </div>
+              <div class="field space1">
+                <span class="fa fa-lock1"></span>
+                <input type="password" class="pass-key1" required placeholder="Password">
+                <span class="show">SHOW</span>
+              </div>
+              <div class="pass1">
+                <a href="#">Forgot Password?</a>
+              </div>
+              <div class="field1">
+                <input type="submit" value="LOGIN">
+              </div>
+            </form>
+            <div class="login1">Or login with</div>
+            <div class="links1">
+              <div class="facebook1">
+                <i class="fab fa-facebook-f1"><span>Facebook</span></i>
+              </div>
+              <div class="google1">
+                <i class="fab fa-google1"></i><span>Google</span>
+              </div>
+            </div>
+            <div class="signup1">Don't have account?
+                <button id="signupbtn1">Register</button>
+            </div>
+          </div>
+          <div class="back1">
+              <button id="back_close1">X</button>
+              <header>Client<br>Register Form</header>
+              <form action="../Registration Page/Category.html">
+                <div class="field1">
+                  <span class="fa fa-user1"></span>
+                  <input type="text" required placeholder="Email or Phone">
+                </div>
+                <div class="field space1">
+                  <span class="fa fa-lock1"></span>
+                  <input type="password" class="pass-key1" required placeholder="Password">
+                  <span class="show1">SHOW</span>
+                </div>
+                <div class="field space1">
+                  <span class="fa fa-lock1"></span>
+                  <input type="password" class="pass-key1" required placeholder="Confirm Password">
+                </div>
+                <div class="field space1">
+                  <input type="submit" value="REGISTER">
+                </div>
+              </form>
+              <div class="login1">Or login with</div>
+            <div class="links1">
+              <div class="facebook1">
+                <i class="fab fa-facebook-f1"><span>Facebook</span></i>
+              </div>
+              <div class="google1">
+                <i class="fab fa-google1"></i><span>Google</span>
+              </div>
+            </div>
+              <div class="signup1">Already have account?
+                <button id="Signinbtn1">Signin</button>
+            </div>
+          </div>
+    </div>
+  </div>
+  </body>
+  <script src="login.js"></script>
+</html>
