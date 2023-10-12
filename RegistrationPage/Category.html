@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+    <link rel="stylesheet" type="text/css" href="Category.css">
+    <link rel="stylesheet" type="text/css" href="../website.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="toggle">
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <input type="checkbox"/>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <a href="../website.html"><li>Home</li></a>
+                        <a href=""><li>About</li></a>
+                        <a href=""><li>Chat</li></a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="Name">
+            <label for="name"><b>Event Planner</b></label>
+        </div>
+        <div class="img">
+            <img src="../Images/logo.jpg" height="100" width="100"  >
+        </div>
+        <div class="btn1">
+            <a href="../Login/login.html"><button type="button" id="b1" class="loginbtn">Login</button></a>
+            <!--<img src="../Images/search.png" height="40" width="30"  >-->
+        </div> 
+    </div>
+    <form>
+        <div class="multiselect">
+          <div class="selectBox" onclick="showCheckboxes()">
+            <select>
+              <option>Select an option</option>
+            </select>
+            <div class="overSelect"></div>
+          </div>
+          <div id="checkboxes">
+            <label for="one">
+              <input type="checkbox" id="one" />Function_halls</label>
+            <label for="two">
+              <input type="checkbox" id="two" />Beauticians</label>
+            <label for="three">
+              <input type="checkbox" id="three" />Catering</label>
+            <label for="four">
+                <input type="checkbox" id="four" />Flower_decoration
+            </label>
+            <label for="five">
+                <input type="checkbox" id="five" />Photographer
+            </label>
+            <label for="six">
+                <input type="checkbox" id="six" />orchestra
+            </label>
+          </div>
+        </div>
+      </form>
+    <script src="Category.js"></script>
+    <form action="../website.html">
+        <div class="container">
+            <p class="heading"><b> Please fill this form to enter your work details</b></p>
+            <p>&nbsp;</p>
+            <table class="details">
+                <tr>
+                    <td>
+                        <label for="Category_name"><b>Category_Name</b></label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Please enter  Category" name="Category_Name" id="Category_Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Conctact_Person"><b>Conctact Person</b></label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Please enter  Name" name="Conctact_Person" id="Conctact_Person" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Conctact_No"><b>Conctact Number</b></label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Please enter  Conctact_No" name="Conctact_No" id="Conctact_No" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Email_id"><b>Email_id</b></label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Please enter  Email_id" name="Email_id" id="Email_id" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Company_Name"><b>Company_Name</b></label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Please enter Company_Name" name="Company_Name" id="Company_Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="About"><b>Description</b></label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder=" " name="About" id="About" required>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
