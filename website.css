@@ -131,11 +131,8 @@ body::-webkit-scrollbar
     padding-top: 30px;
     text-align: center;
     padding-bottom: 50px;
-}
-.loginbtn
-{
-  border: none;
-  font-size: 25px;
+    border: none;
+    font-size: 25px;
 }
 .slider
 {
@@ -251,19 +248,20 @@ tr
 .image
 {
     position: relative;
-    width: 400px;
+    width: 450px;
 }
 .image--img
 {
     display: block;
-    width: 90px;
+    width: 100%;
+    height: 100%;
 }
 .image--overlay
 {
     position: absolute;
     top: 10px;
-    width: 80%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     background: rgb(0 ,0,0,0.6);
     color:white;
     display: flex;

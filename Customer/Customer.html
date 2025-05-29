@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Locations</title>
+        <link rel="stylesheet" type="text/css" href="Customer.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="nav-bar">
+            <div class="toggle">
+                <nav role="navigation">
+                    <div id="menuToggle">
+                        <input type="checkbox"/>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <a href="../website.html"><li>Home</li></a>
+                            <a href="#About"><li>About</li></a>
+                            <a href=""><li>Info</li></a>
+                            <a href=""><li>ContactUs</li></a>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="Name">
+                <label for="name"><b>Event Planner</b></label>
+            </div>
+            <div class="img">
+                <img src="../Images/logo.jpg" height="100" width="100"  >
+            </div>
+            <div class="btn1">
+                <a href="../Login/login.html" style="text-decoration: none; color: inherit;">Login</a>
+                <!--<img src="Images/search.png" height="40" width="30"  >-->
+            </div> 
+        </div>
+        <div id="headline">Let's Find and Party Hard!</div>
+        <div class="center-wrapper">
+            <div class="dropdown-container" id="dropdown">
+              <div class="dropdown-button" onclick="toggleDropdown()">Area</div>
+              <div class="dropdown-content">
+                <a href="#">Bangalore</a>
+                <a href="#">Hyderabad</a>
+                <a href="#">Chittoor</a>
+              </div>
+            </div>
+          </div>
+          <script src="Customer.js"></script>
+    </body>
+</html>
