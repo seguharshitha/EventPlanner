@@ -15,3 +15,4 @@ function showCheckboxes() {
     expanded = false;
   }
 }
+

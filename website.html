@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Event Planner</title>
         <link rel="stylesheet" type="text/css" href="website.css">
+        <link type="text/css" rel="stylesheet" href="css\bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
     <body>
             <div class="nav-bar">
@@ -19,8 +22,8 @@
                             <ul id="menu">
                                 <a href="website.html"><li>Home</li></a>
                                 <a href="#About"><li>About</li></a>
-                                <a href=""><li>Info</li></a>
-                                <a href=""><li>ContactUs</li></a>
+                                <a href="#Info"><li>Info</li></a>
+                                <a href="#Contact"><li>ContactUs</li></a>
                             </ul>
                         </div>
                     </nav>
@@ -29,10 +32,10 @@
                     <label for="name"><b>Event Planner</b></label>
                 </div>
                 <div class="img">
-                    <img src="Images/logo.jpg" height="100" width="100"  >
+                    <img src="./Images/logo.jpg" height="100" width="100"  >
                 </div>
                 <div class="btn1">
-                    <a href="./Login/login.html"><button type="button" id="b1" class="loginbtn">Login</button></a>
+                    <a href="./Login/login.html" style="text-decoration: none; color: inherit;">Login</a>
                     <!--<img src="Images/search.png" height="40" width="30"  >-->
                 </div> 
             </div>
@@ -136,7 +139,15 @@
                         </table>
                     </section>
             </div>
+            <div>
             <h2 id="About">About Us</h2>
+        </div>
+        <div>
+            <h2 id="Info">Info</h2>
+        </div>
+        <div>
+            <h2 id="Contact">ContactUs</h2>
+        </div>
         <script src="website.js"></script>
     </body>
 </html>
