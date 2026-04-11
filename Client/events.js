@@ -14,3 +14,4 @@ const imageInput = document.getElementById('imageInput');
         reader.readAsDataURL(file);
       });
     });
+

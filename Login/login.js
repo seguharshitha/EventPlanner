@@ -56,20 +56,26 @@ function closebox1(){
 function flipcard1(){
     card1.classList.toggle("flipcard1");
 }
-function validateform()
+function validateform(form)
 {
-    var Email=document.CustLogin.Email.value;
-    var password=document.CustLogin.password.value;
-    var regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/; 
-    if (Email==null || Email==""){  
-        alert("Email can't be blank");  
-        return false;  
-      }else if(password.length < 6 || password.length > 15){
+    var email = form.Email ? form.Email.value.trim() : (form.Email1 ? form.Email1.value.trim() : "");
+    var password = form.password ? form.password.value : (form.password1 ? form.password1.value : "");
+    var regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
+    if (email === "") {
+        alert("Email can't be blank");
         return false;
     }
-    else if(!regularExpression.test(password)) {
-        alert("password should contain atleast one number,one character and one special character");
+
+    if (password.length < 6 || password.length > 15) {
+        alert("Password must be between 6 and 15 characters.");
         return false;
     }
-    
+
+    if (!regularExpression.test(password)) {
+        alert("Password should contain at least one number, one letter and one special character.");
+        return false;
+    }
+    sessionStorage.setItem("loggedInEmail", email);
+    return true;
 }

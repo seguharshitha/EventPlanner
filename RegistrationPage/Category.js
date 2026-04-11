@@ -1,7 +1,13 @@
-document.querySelector('.selector').addEventListener('click',()=>{
-    document.querySelector('.list').classList.toggle('show');
-    document.querySelector('.down-arrow').classList.toggle('rotate180');
-})
+var selectorToggle = document.querySelector('.selector');
+var listElement = document.querySelector('.list');
+var downArrow = document.querySelector('.down-arrow');
+
+if (selectorToggle && listElement && downArrow) {
+  selectorToggle.addEventListener('click', ()=>{
+    listElement.classList.toggle('show');
+    downArrow.classList.toggle('rotate180');
+  });
+}
 
 var expanded = false;
 
@@ -15,4 +21,15 @@ function showCheckboxes() {
     expanded = false;
   }
 }
+
+// Auto-fill the email field from login storage
+(function() {
+  var savedEmail = sessionStorage.getItem("loggedInEmail");
+  if (savedEmail) {
+    var emailField = document.getElementById("Email_id");
+    if (emailField) {
+      emailField.value = savedEmail;
+    }
+  }
+})();
 
