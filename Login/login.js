@@ -56,20 +56,39 @@ function closebox1(){
 function flipcard1(){
     card1.classList.toggle("flipcard1");
 }
-function validateform()
+/*function validateform()
 {
     var Email=document.CustLogin.Email.value;
     var password=document.CustLogin.password.value;
+    var Em=document.ClientLogin.Email.value;
+    var pswd=document.ClientLogin.Password.value;
     var regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/; 
-    if (Email==null || Email==""){  
+    if (!Email || !Em){  
         alert("Email can't be blank");  
         return false;  
-      }else if(password.length < 6 || password.length > 15){
+    }
+    else if(password.length < 6 || password.length > 15||pswd.length < 6 || pswd.length > 15){
         return false;
     }
-    else if(!regularExpression.test(password)) {
+    else if(!regularExpression.test(password) || !regularExpression.test(pswd)){ 
         alert("password should contain atleast one number,one character and one special character");
         return false;
     }
-    
+}*/
+function validateform()
+{
+    var Email=document.ClientLogin.Email.value;
+    var password=document.ClientLogin.Password.value;
+    var regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/; 
+    if (!Email){  
+        alert("Email can't be blank");  
+        return false;  
+    }
+    else if(password.length < 6 || password.length > 15){
+        return false;
+    }
+    else if(!regularExpression.test(password)){ 
+        alert("password should contain atleast one number,one character and one special character");
+        return false;
+    }
 }
