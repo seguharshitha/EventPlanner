@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+    <link rel="stylesheet" type="text/css" href="Category.css">
+    
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="toggle">
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <input type="checkbox"/>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <a href="../website.html"><li>Home</li></a>
+                        <a href=""><li>About</li></a>
+                        <a href=""><li>Chat</li></a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="Name">
+            <label for="name"><b>Event Planner</b></label>
+        </div>
+        <div class="img">
+            <img src="../Images/logo.jpg" height="100" width="100"  >
+        </div>
+        <div class="btn1">
+            <a href="../Login/login.html"><button type="button" id="b1" class="loginbtn">Login</button></a>
+            <!--<img src="../Images/search.png" height="40" width="30"  >-->
+        </div> 
+    </div>
+    <div class="dropdown">
+        <span><b>Select the Category</b></span>
+        <div class="dropdown-content">
+          <input type="checkbox" id="option1" name="option1">
+          <label for="option1">Function Halls</label><br>
+          <input type="checkbox" id="option2" name="option2">
+          <label for="option2">Beauticians</label><br>
+          <input type="checkbox" id="option3" name="option3">
+          <label for="option3">Catering</label><br>
+          <input type="checkbox" id="option4" name="option4">
+          <label for="option4">Flower_Decoration</label><br>
+          <input type="checkbox" id="option5" name="option5">
+          <label for="option5">Photographer</label><br>
+          <input type="checkbox" id="option6" name="option6">
+          <label for="option6">Orchestra</label><br>
+        </div>
+      </div>
+    <form action="../Client/events.html">
+        <div class="container">
+            <p class="heading"><b> Please fill this form to enter your work details</b></p>
+            <p>&nbsp;</p>
+            <table class="details">
+                <tr>
+                    <td>
+                        <label for="Category_name"><b>Category_Name</b></label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Category" name="Category_Name" id="Category_Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Conctact_Person"><b>Conctact Person</b></label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Name" name="Conctact_Person" id="Conctact_Person" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Conctact_No"><b>Conctact Number</b></label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Conctact_No" name="Conctact_No" id="Conctact_No" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Email_id"><b>Email_id</b></label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Email_id" name="Email_id" id="Email_id" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Company_Name"><b>Company_Name</b></label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Company_Name" name="Company_Name" id="Company_Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="About"><b>Description</b></label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder=" " name="About" id="About" required>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <button class="submit"> Submit
+        </button>
+    </form>
+    <script src="Category.js"></script>
+</body>
+</html>

@@ -1,20 +1,37 @@
-<!DOCTYPE html>
-<head>
-  <link rel="stylesheet" type="text/css" href="test.css">
-</head>
-<body>
-<div id="burger-menu">
-  <span></span>
-</div>
+<!-- Login Form -->
+<form id="loginForm" data-type="login" onsubmit="return validateForm(this, event)">
+    <h2>Customer Login</h2>
+    <div class="input-group">
+        <label>Email</label>
+        <input type="email" id="loginEmail" required placeholder="Enter your email">
+    </div>
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="loginPassword" required placeholder="Enter password">
+    </div>
+    <div id="loginError" class="error-message"></div>
+    <button type="submit">Login</button>
+</form>
 
-<div id="menu">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact Us</a></li>
-      <li><a href="#">News</a></li>
-    </ul>
-</div>
-<script src="test.js"></script>
-</body>
-</html>
+<!-- Registration Form -->
+<form id="registerForm" data-type="register" onsubmit="return validateForm(this, event)">
+    <h2>Create Account</h2>
+    <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="regName" required placeholder="Enter your name">
+    </div>
+    <div class="input-group">
+        <label>Email</label>
+        <input type="email" id="regEmail" required placeholder="Enter your email">
+    </div>
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="regPassword" required placeholder="Create password">
+    </div>
+    <div class="input-group">
+        <label>Confirm Password</label>
+        <input type="password" id="regConfirmPassword" required placeholder="Repeat password">
+    </div>
+    <div id="registerError" class="error-message"></div>
+    <button type="submit">Register</button>
+</form>
