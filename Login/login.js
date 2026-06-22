@@ -58,37 +58,43 @@ function flipcard1(){
 }
 /*function validateform()
 {
-    var Email=document.CustLogin.Email.value;
     var password=document.CustLogin.password.value;
-    var Em=document.ClientLogin.Email.value;
-    var pswd=document.ClientLogin.Password.value;
     var regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/; 
-    if (!Email || !Em){  
-        alert("Email can't be blank");  
-        return false;  
-    }
-    else if(password.length < 6 || password.length > 15||pswd.length < 6 || pswd.length > 15){
+    if(password.length < 8 || password.length > 15){
+        alert("Password length should be between 8 and 15 characters");
         return false;
     }
-    else if(!regularExpression.test(password) || !regularExpression.test(pswd)){ 
-        alert("password should contain atleast one number,one character and one special character");
+    if(!regularExpression.test(password)){ 
+        alert("Password should contain at least one number, one character, and one special character");
         return false;
     }
 }*/
-function validateform()
-{
-    var Email=document.ClientLogin.Email.value;
-    var password=document.ClientLogin.Password.value;
-    var regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/; 
-    if (!Email){  
-        alert("Email can't be blank");  
-        return false;  
-    }
-    else if(password.length < 6 || password.length > 15){
+
+function validateMyForm(formElement) {
+  // Query fields within the passed form pointer
+  const Email = formElement.querySelector('input[name="Email"]').value;
+  const password = formElement.querySelector('input[name="password"]').value;
+  const regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/; 
+
+  if (Email.trim() === "") {
+    alert("Email cannot be empty.");
+    return false; 
+  }
+
+  if (password.trim() === "") {
+    alert("Password cannot be empty.");
+    return false; 
+  }
+
+  if(password.length < 6 || password.length > 15){
+        alert("Password length should be between 8 and 15 characters");
         return false;
     }
-    else if(!regularExpression.test(password)){ 
-        alert("password should contain atleast one number,one character and one special character");
+    if(!regularExpression.test(password)){ 
+        alert("Password should contain at least one number, one character, and one special character");
         return false;
     }
+
+  return true; 
 }
+
