@@ -56,45 +56,52 @@ function closebox1(){
 function flipcard1(){
     card1.classList.toggle("flipcard1");
 }
-/*function validateform()
-{
-    var password=document.CustLogin.password.value;
-    var regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/; 
-    if(password.length < 8 || password.length > 15){
-        alert("Password length should be between 8 and 15 characters");
-        return false;
-    }
-    if(!regularExpression.test(password)){ 
-        alert("Password should contain at least one number, one character, and one special character");
-        return false;
-    }
-}*/
-
 function validateMyForm(formElement) {
-  // Query fields within the passed form pointer
-  const Email = formElement.querySelector('input[name="Email"]').value;
-  const password = formElement.querySelector('input[name="password"]').value;
-  const regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/; 
+    const emailInput = formElement.querySelector('input[name="Email"], input[name="Email1"]');
+    const passwordInput = formElement.querySelector('input[name="password"], input[name="Password1"]');
+    const confirmPasswordInput = formElement.querySelector('input[name="confirmPassword"]');
+    const email = emailInput ? emailInput.value.trim() : "";
+    const password = passwordInput ? passwordInput.value.trim() : "";
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const regularExpression = /^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/;
 
-  if (Email.trim() === "") {
+    if (email === "") {
     alert("Email cannot be empty.");
-    return false; 
+        return false;
   }
 
-  if (password.trim() === "") {
+    if (!emailPattern.test(email)) {
+        alert("Enter a valid email address.");
+        return false;
+    }
+
+    if (password === "") {
     alert("Password cannot be empty.");
-    return false; 
+        return false;
   }
 
-  if(password.length < 6 || password.length > 15){
-        alert("Password length should be between 8 and 15 characters");
-        return false;
-    }
-    if(!regularExpression.test(password)){ 
-        alert("Password should contain at least one number, one character, and one special character");
+    if (password.length < 8 || password.length > 15) {
+        alert("Password length should be between 8 and 15 characters.");
         return false;
     }
 
-  return true; 
+    if (!regularExpression.test(password)) {
+        alert("Password should contain at least one letter, one number, and one special character.");
+        return false;
+    }
+
+    if (confirmPasswordInput) {
+        const confirmPassword = confirmPasswordInput.value.trim();
+        if (confirmPassword === "") {
+            alert("Confirm Password cannot be empty.");
+            return false;
+        }
+        if (password !== confirmPassword) {
+            alert("Password and Confirm Password must match.");
+            return false;
+        }
+    }
+
+    return true;
 }
 

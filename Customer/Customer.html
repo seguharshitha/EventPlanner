@@ -40,12 +40,19 @@
         <div id="headline">Let's Find and Party Hard!</div>
         <div class="center-wrapper">
             <div class="dropdown-container" id="dropdown">
-              <div class="dropdown-button" onclick="toggleDropdown()">Area</div>
-              <div class="dropdown-content">
-                <a href="#">Bangalore</a>
-                <a href="#">Hyderabad</a>
-                <a href="#">Chittoor</a>
+                            <button class="dropdown-button" id="areaDropdownButton" type="button" onclick="toggleDropdown()">Area</button>
+                            <div class="dropdown-content" id="areaDropdownContent">
+                                <label class="option-item">
+                                    <input type="checkbox" class="area-option" value="Bangalore"> Bangalore
+                                </label>
+                                <label class="option-item">
+                                    <input type="checkbox" class="area-option" value="Hyderabad"> Hyderabad
+                                </label>
+                                <label class="option-item">
+                                    <input type="checkbox" class="area-option" value="Chittoor"> Chittoor
+                                </label>
               </div>
+                            <div class="selected-areas" id="selectedAreas">Selected: </div>
             </div>
           </div>
           <script src="Customer.js"></script>
