@@ -13,6 +13,7 @@ const card1 = document.getElementById("card1");
 const back_close1 = document.getElementById("back_close1");
 const signupbtn1 = document.getElementById("signupbtn1");
 const Signinbtn1 = document.getElementById("Signinbtn1");
+const API_BASE_URL = "http://localhost:4000";
 
 ClntBtn.addEventListener("click",popupbox1);
 close1.addEventListener("click",closebox1);
@@ -56,20 +57,6 @@ function closebox1(){
 function flipcard1(){
     card1.classList.toggle("flipcard1");
 }
-/*function validateform()
-{
-    var password=document.CustLogin.password.value;
-    var regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/; 
-    if(password.length < 8 || password.length > 15){
-        alert("Password length should be between 8 and 15 characters");
-        return false;
-    }
-    if(!regularExpression.test(password)){ 
-        alert("Password should contain at least one number, one character, and one special character");
-        return false;
-    }
-}*/
-
 function validateMyForm(formElement) {
   // Query fields within the passed form pointer
   const Email = formElement.querySelector('input[name="Email"]').value;
