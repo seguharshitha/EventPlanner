@@ -1,18 +1,24 @@
-document.querySelector('.selector').addEventListener('click',()=>{
-    document.querySelector('.list').classList.toggle('show');
-    document.querySelector('.down-arrow').classList.toggle('rotate180');
-})
+const selectedCategory = document.getElementById('selectedCategory');
+const categoryOptions = document.querySelectorAll('.category-option');
 
-var expanded = false;
+function updateSelectedCategory() {
+  const selectedOptions = Array.from(categoryOptions).filter(option => option.checked);
 
-function showCheckboxes() {
-  var checkboxes = document.getElementById("checkboxes");
-  if (!expanded) {
-    checkboxes.style.display = "block";
-    expanded = true;
-  } else {
-    checkboxes.style.display = "none";
-    expanded = false;
+  if (!selectedOptions.length) {
+    selectedCategory.innerHTML = '<b>Select the Category</b>';
+    return;
   }
+
+  const labelText = selectedOptions
+    .map(option => option.nextElementSibling?.textContent?.trim() || option.value)
+    .join(', ');
+
+  selectedCategory.innerHTML = `<b>${labelText}</b>`;
 }
+
+categoryOptions.forEach(option => {
+  option.addEventListener('change', updateSelectedCategory);
+});
+
+updateSelectedCategory();
 

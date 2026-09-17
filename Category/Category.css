@@ -11,7 +11,7 @@
 .nav-bar
 {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
     grid-gap: 10px;
     background-color: cornsilk;
 }
@@ -129,12 +129,13 @@
 }
 .btn1
 {
-  padding-top: 30px;
-  text-align: center;
-  padding-bottom: 50px;
-  border: none;
-  font-size: 25px;
-}input
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 50px;
+    border: none;
+    font-size: 25px;
+}
+input
 {
     outline: none;
     border: none;
@@ -154,9 +155,14 @@ td
     font-size: 20px;
 }
 .dropdown {
-  position: relative;
+  position: absolute;
   display: inline-block;
   padding: 12px 600px;
+}
+
+.dropdown > span {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .dropdown-content {
