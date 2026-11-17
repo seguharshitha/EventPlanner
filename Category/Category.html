@@ -7,47 +7,48 @@
     
 </head>
 <body>
-    <div class="nav-bar">
-        <div class="toggle">
-            <nav role="navigation">
-                <div id="menuToggle">
-                    <input type="checkbox"/>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <ul id="menu">
-                        <a href="../website.html"><li>Home</li></a>
-                        <a href=""><li>About</li></a>
-                        <a href=""><li>Chat</li></a>
-                    </ul>
+     <div class="nav-bar">
+                <div class="toggle">
+                    <nav role="navigation">
+                        <div id="menuToggle">
+                            <input type="checkbox"/>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <ul id="menu">
+                                <a href="website.html"><li>Home</li></a>
+                                <a href="#About"><li>About</li></a>
+                                <a href="#Info"><li>Info</li></a>
+                                <a href="#Contact"><li>ContactUs</li></a>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
-        </div>
-        <div class="Name">
-            <label for="name"><b>Event Planner</b></label>
-        </div>
-        <div class="img">
-            <img src="../Images/logo.jpg" height="100" width="100"  >
-        </div>
-        <div class="btn1">
-            <a href="../Login/login.html"><button type="button" id="b1" class="loginbtn">Login</button></a>
-            <!--<img src="../Images/search.png" height="40" width="30"  >-->
-        </div> 
-    </div>
+                <div class="Name">
+                    <label for="name"><b>Event Planner</b></label>
+                </div>
+                <div class="img">
+                    <img src="../Images/logo.jpg" height="100" width="100"  >
+                </div>
+                <div class="btn1">
+                    <a href="../Login/login.html" style="text-decoration: none; color: inherit;">Login</a>
+                    <!--<img src="Images/search.png" height="40" width="30"  >-->
+                </div> 
+            </div>
     <div class="dropdown">
-        <span><b>Select the Category</b></span>
+        <span id="selectedCategory"><b>Select the Category</b></span>
         <div class="dropdown-content">
-          <input type="checkbox" id="option1" name="option1">
+          <input type="checkbox" class="category-option" id="option1" name="category" value="Function Halls">
           <label for="option1">Function Halls</label><br>
-          <input type="checkbox" id="option2" name="option2">
+          <input type="checkbox" class="category-option" id="option2" name="category" value="Beauticians">
           <label for="option2">Beauticians</label><br>
-          <input type="checkbox" id="option3" name="option3">
+          <input type="checkbox" class="category-option" id="option3" name="category" value="Catering">
           <label for="option3">Catering</label><br>
-          <input type="checkbox" id="option4" name="option4">
+          <input type="checkbox" class="category-option" id="option4" name="category" value="Flower_Decoration">
           <label for="option4">Flower_Decoration</label><br>
-          <input type="checkbox" id="option5" name="option5">
+          <input type="checkbox" class="category-option" id="option5" name="category" value="Photographer">
           <label for="option5">Photographer</label><br>
-          <input type="checkbox" id="option6" name="option6">
+          <input type="checkbox" class="category-option" id="option6" name="category" value="Orchestra">
           <label for="option6">Orchestra</label><br>
         </div>
       </div>
