@@ -10,12 +10,15 @@ body::-webkit-scrollbar
 .nav-bar
 {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 10px;
+    grid-template-columns: minmax(0, 1fr) auto auto minmax(0, 1fr);
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px 24px;
     background-color: cornsilk;
 }
 .toggle
 {
+  justify-self: start;
   margin: 0;
   padding: 0;
   color: blue;
@@ -25,8 +28,8 @@ body::-webkit-scrollbar
 {
   display: block;
   position: relative;
-  top: 50px;
-  left: 50px;
+  top: 0;
+  left: 0;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
@@ -116,23 +119,54 @@ body::-webkit-scrollbar
 }
 .Name
 {
-  padding-top: 30px;
+  padding: 0;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   font-style: italic;
+  white-space: nowrap;
 }
 .img
 {
     text-align: center;
-    padding-top: 10px;
+    padding: 0;
+}
+.img img
+{
+  display: block;
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
 }
 .btn1
 {
-    padding-top: 30px;
-    text-align: center;
-    padding-bottom: 50px;
+    justify-self: end;
+    padding: 0;
     border: none;
     font-size: 25px;
+}
+@media (max-width: 700px)
+{
+  .nav-bar
+  {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 8px 14px;
+    padding: 8px 14px;
+  }
+  .Name
+  {
+    font-size: 30px;
+  }
+  .img img
+  {
+    width: 64px;
+    height: 64px;
+  }
+  .btn1
+  {
+    grid-column: 2 / 4;
+    justify-self: end;
+    font-size: 20px;
+  }
 }
 .slider
 {

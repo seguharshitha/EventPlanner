@@ -39,13 +39,21 @@
         </div>
         <div id="headline">Let's Find and Party Hard!</div>
         <div class="center-wrapper">
-            <div class="dropdown-container" id="dropdown">
-              <div class="dropdown-button" onclick="toggleDropdown()">Area</div>
-              <div class="dropdown-content">
-                <a href="#">Bangalore</a>
-                <a href="#">Hyderabad</a>
-                <a href="#">Chittoor</a>
+            <div class="dropdown-container" id="area-dropdown">
+                <div class="dropdown-button" onclick="toggleDropdown('area-dropdown')">Area</div>
+                <div class="dropdown-content">
+                    <a href="#">Bangalore</a>
+                    <a href="#">Hyderabad</a>
+                    <a href="#">Chittoor</a>
               </div>
+            </div>
+            <div class="dropdown-container" id="category-dropdown">
+                <div class="dropdown-button" onclick="toggleDropdown('category-dropdown')">Category</div>
+                <div class="dropdown-content">
+                    <a href="#">Birthday</a>
+                    <a href="#">Wedding</a>
+                    <a href="#">Corporate</a>
+                </div>
             </div>
           </div>
           <script src="Customer.js"></script>
